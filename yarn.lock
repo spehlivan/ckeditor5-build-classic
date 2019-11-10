@@ -1108,10 +1108,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-ckeditor5-upload-strapi@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ckeditor5-upload-strapi/-/ckeditor5-upload-strapi-1.0.1.tgz#ea82eac35dee7a1b74d929b13147e8be77f30d58"
-  integrity sha512-IOm422z9p46FFecsPHQ1uPujzQmZAz4Y/nT185X4k7fZ5Sbl3TUNLMDk1jDZZm2ZT9NWoJuTD8cTgTXjWqRfPQ==
+ckeditor5-upload-strapi@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ckeditor5-upload-strapi/-/ckeditor5-upload-strapi-1.0.2.tgz#05a66fb2a38820e286d607b18a00108cc78d92d6"
+  integrity sha512-ySFE3R4cpwyw43i1mgEZJBQhbAocbQCF6JlRSYcgID905040xlQdJ+nI+FfYfU29rA/vA0mLBo6Jycrdlfv/8Q==
   dependencies:
     "@ckeditor/ckeditor5-core" "^15.0.0"
     "@ckeditor/ckeditor5-ui" "^15.0.0"
