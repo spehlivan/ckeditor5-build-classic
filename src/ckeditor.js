@@ -32,6 +32,10 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import SimpleUploadAdapterStrapi from 'ckeditor5-upload-strapi/src/adapters/simpleuploadadapterstrapi';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -45,6 +49,8 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	BlockQuote,
 	Underline,
+	Strikethrough,
+	Code,
 	CKFinder,
 	EasyImage,
 	Heading,
@@ -62,7 +68,9 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	SimpleUploadAdapterStrapi
+	SimpleUploadAdapterStrapi,
+	FontSize,
+	FontColor
 ];
 
 // Editor configuration.
@@ -74,9 +82,14 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'underline',
+			'code',
+			'strikethrough',
 			'link',
 			'bulletedList',
 			'numberedList',
+			'|',
+			'FontSize',
+			'fontColor',
 			'|',
 			'alignment',
 			'indent',
@@ -118,5 +131,74 @@ ClassicEditor.defaultConfig = {
 		}
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'en',
+	fontColor: {
+		colors: [
+			{
+				color: 'hsl(0, 0%, 0%)',
+				label: 'Black'
+			},
+			{
+				color: 'hsl(0, 0%, 30%)',
+				label: 'Dim grey'
+			},
+			{
+				color: 'hsl(0, 0%, 60%)',
+				label: 'Grey'
+			},
+			{
+				color: 'hsl(0, 0%, 90%)',
+				label: 'Light grey'
+			},
+			{
+				color: 'hsl(0, 0%, 100%)',
+				label: 'White',
+				hasBorder: true
+			},
+			{
+				color: 'hsl(0, 75%, 60%)',
+				label: 'Red'
+			},
+			{
+				color: 'hsl(30, 75%, 60%)',
+				label: 'Orange'
+			},
+			{
+				color: 'hsl(60, 75%, 60%)',
+				label: 'Yellow'
+			},
+			{
+				color: 'hsl(90, 75%, 60%)',
+				label: 'Light green'
+			},
+			{
+				color: 'hsl(120, 75%, 60%)',
+				label: 'Green'
+			},
+			{
+				color: 'hsl(150, 75%, 60%)',
+				label: 'Aquamarine'
+			},
+			{
+				color: 'hsl(180, 75%, 60%)',
+				label: 'Turquoise'
+			},
+			{
+				color: 'hsl(210, 75%, 60%)',
+				label: 'Light blue'
+			},
+			{
+				color: 'hsl(240, 75%, 60%)',
+				label: 'Blue'
+			},
+			{
+				color: 'hsl(270, 75%, 60%)',
+				label: 'Purple'
+			},
+			{
+				color: 'hsl(329, 82%, 61%)',
+				label: 'Colors Purple'
+			}
+		]
+	}
 };
